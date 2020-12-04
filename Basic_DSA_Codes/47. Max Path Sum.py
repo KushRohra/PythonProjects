@@ -1,0 +1,17 @@
+# O(n) time | O(log(n)) space in the callstack
+def maxPathSum(tree):
+    _, maxSum = findMaxSum(tree)
+    return maxSum
+
+def findMaxSum(tree):
+    if tree is None:
+        return (0, 0)
+    leftMaxSumAsBranch, leftMaxPathSum = findMaxSum(tree.left)
+    rightMaxSumAsBranch, rightMaxPathSum = findMaxSum(tree.right)
+    maxChildSumAsBranch = max(leftMaxPathSum, rightMaxPathSum)
+
+    value = tree.value
+    maxSumAsBranch = max(maxChildSumAsBranch + value, value)
+    maxSumAsRootNode = max(leftMaxSumAsBranch + value + rightMaxSumAsBranch, maxSumAsBranch)
+    maxPathSum = max(leftMaxPathSum, rightMaxPathSum, maxSumAsRootNode)
+    return (maxSumAsBranch, maxPathSum)
