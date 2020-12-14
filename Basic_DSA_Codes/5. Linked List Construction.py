@@ -52,7 +52,7 @@ class DoublyLinkedList:
         if node is not None:
             self.insertBefore(node, nodeToInsert)
         else:
-            self.setTail(
+            self.setTail(nodeToInsert)
 
     def removeNodesWithValue(self, value):
         node = self.head
@@ -65,9 +65,9 @@ class DoublyLinkedList:
     def remove(self, node):
         if node == self.head:
             self.head = self.head.next
-         if node == self.tail:
-             self.tail = self.tail.prev
-         self.removeNodeBindings(node)
+        if node == self.tail:
+            self.tail = self.tail.prev
+        self.removeNodeBindings(node)
 
     def removeNodeBindings(self, node):
         if node.prev is not None:

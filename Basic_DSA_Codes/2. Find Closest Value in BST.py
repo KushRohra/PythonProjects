@@ -1,6 +1,7 @@
 def findClosestValueInBst(tree, target):
     return findClosestValueInBstHelper(tree, target, float("inf"))
 
+
 # Average: O(log(n)) time | Average: O(log(n)) space
 # Worst: O(n) time
 # Recursive Fn
@@ -13,8 +14,9 @@ def findClosestValueInBstHelper(tree, target, closest):
         return findClosestValueInBstHelper(tree.left, target, closest)
     elif target > tree.value:
         return findClosestValueInBstHelper(tree.right, target, closest)
-    else :
+    else:
         return closest
+
 
 # Average: O(log(n)) time | Average: O(1) space
 # Worst: O(n) time
@@ -25,9 +27,9 @@ def findClosestValueInBstHelper(tree, target, closest):
         if abs(target - closest) > abs(target - currentNode.value):
             closest = currentNode.value
         if target < currentNode.value:
-            curerntNode = curerntNode.left
+            currentNode = currentNode.left
         elif target > currentNode.value:
-            curerntNode = curerntNode.right
-        else :
+            currentNode = currentNode.right
+        else:
             break
     return closest

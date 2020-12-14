@@ -15,6 +15,7 @@ def maxSumIncreasingSubsequence(array):
 
     return [sums[maxSumIdx], buildSequence(array, sequences, maxSumIdx)]
 
+
 def buildSequence(array, sequences, currentIdx):
     sequence = []
     while currentIdx is not None:

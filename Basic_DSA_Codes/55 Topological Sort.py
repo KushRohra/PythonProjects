@@ -10,6 +10,7 @@ def createJobGraph(jobs, deps):
     graph = JobGraph(jobs)
     for prereq, job in deps:
         graph.addPrereq(job, prereq)
+    return graph
 
 
 def getOrderedJobs(graph):
@@ -30,9 +31,9 @@ def depthFirstTraversal(node, orderedJobs):
         return True
     node.visiting = True
     for prereqNode in node.prereqs:
-            containsCycle = depthFirstTraversal(prereqNode, orderedJobs)
-            if containsCycle:
-                return True
+        containsCycle = depthFirstTraversal(prereqNode, orderedJobs)
+        if containsCycle:
+            return True
     node.visited = True
     node.visiting = False
     orderedJobs.append(node.job)
@@ -69,8 +70,6 @@ class JobNode:
         self.visiting = False
 
 
-
-
 # 2nd solution
 
 # O(j + d) time | O(j + d) space
@@ -92,9 +91,9 @@ def getOrderedJobs(graph):
     while len(nodesWithNoPrereqs):
         node = nodesWithNoPrereqs.pop()
         orderedJobs.append(node.job)
-        removeDeps(node, nodesWithNoPrereqs)\
-    graphHasEdges = any(node.numOfPrereqs fro node in graph.nodes)
-    return [] if graphHasEdges else orderedJobs
+        removeDeps(node, nodesWithNoPrereqs)
+        graphHasEdges = any(node.numOfPrereqs for node in graph.nodes)
+        return [] if graphHasEdges else orderedJobs
 
 
 def removeDeps(node, nodesWithNoPrereqs):

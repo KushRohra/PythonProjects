@@ -3,6 +3,7 @@ class LinkedList:
         self.value = value
         self.next = None
 
+
 # 1st approach : Iterative
 
 # O(n + m) time | O(1) space
@@ -25,13 +26,12 @@ def mergeLinkedList(headOne, headTwo):
     return headOne if headOne.value < headTwo.value else headTwo
 
 
-
-
 # 2nd approach : Recursive
 
 # O(n + m) time | O(n + m) space on callstack
 def mergeLinkedList(headOne, headTwo):
     recursiveMerge(headOne, headTwo, None)
+
 
 def recursiveMerge(p1, p2, p1Prev):
     if p1.value < p2.value:

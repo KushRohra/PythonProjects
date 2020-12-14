@@ -3,6 +3,7 @@ def maxPathSum(tree):
     _, maxSum = findMaxSum(tree)
     return maxSum
 
+
 def findMaxSum(tree):
     if tree is None:
         return (0, 0)

@@ -6,7 +6,7 @@ class ContinuousMedianHandler:
 
     # O(log(n)) time | O(n) space
     def insert(self, number):
-        if not in self.lowers.length or number < self.lowers.peek():
+        if not self.lowers.length or number < self.lowers.peek():
             self.lowers.insert(number)
         else:
             self.greaters.insert(number)
@@ -17,18 +17,19 @@ class ContinuousMedianHandler:
         if self.lowers.length - self.greaters.length == 2:
             self.greaters.insert(self.lowers.remove())
         elif self.greaters.length - self.lowers.length == 2:
-            self.lowers.insert(self.greters.remove())
+            self.lowers.insert(self.greaters.remove())
 
     def updateMedian(self):
-        if self.lowers.length = self.greaters.length:
+        if self.lowers.length == self.greaters.length:
             self.median = (self.lowers.peek() + self.greaters.peek()) / 2
         elif self.lowers.length > self.greaters.length:
             self.median = self.lowers.peek()
-        elif:
+        else:
             self.median = self.greaters.peek()
 
     def getMedian(self):
         return self.median
+
 
 class Heap:
     def __init__(self, comparisonFunc, array):
@@ -60,7 +61,7 @@ class Heap:
             else:
                 return
 
-    def siftUp(self, current, heap):
+    def siftUp(self, currentIndex, heap):
         parentIndex = (currentIndex - 1) // 2
         while currentIndex > 0:
             if self.comparisonFunc(heap[currentIndex], heap[parentIndex]):
@@ -87,8 +88,10 @@ class Heap:
     def swap(self, i, j, array):
         array[i], array[j] = array[j], array[i]
 
+
 def MAX_HEAP_FUNC(a, b):
     return a > b
+
 
 def MIN_HEAP_FUNC(a, b):
     return a < b

@@ -9,6 +9,7 @@ def boggleBoard(board, words):
             explore(i, j, trie.root, visited, finalWords)
     return list(finalWords.keys())
 
+
 def explore(i, j, board, trieNode, visited, finalWords):
     if visited[i][j]:
         return
@@ -24,24 +25,27 @@ def explore(i, j, board, trieNode, visited, finalWords):
         explore(neighbor[0], neighbor[1], board, trieNode, visited, finalWords)
     visited[i][j] = False
 
+
 def getNeighbors(i, j, board):
     neighbors = []
     n = len(board)
     m = len(board[0])
-    coord = [[-1,-1], [-1,1], [1,1], [1,-1], [-1,0], [1,0], [0,-1], [0,1]]
-    for x,y in coord:
+    coord = [[-1, -1], [-1, 1], [1, 1], [1, -1], [-1, 0], [1, 0], [0, -1], [0, 1]]
+    for x, y in coord:
         X = i + x
         Y = j + y
         if inBoard(X, Y, n, m):
-            neighbors.append([X,Y])
+            neighbors.append([X, Y])
     return neighbors
+
 
 def inBoard(x, y, n, m):
     return x >= 0 and y >= 0 and x < n and y < m
 
+
 class Trie:
     def __init__(self):
-        self.root= {}
+        self.root = {}
         self.endSymbol = "*"
 
     def add(self, word):

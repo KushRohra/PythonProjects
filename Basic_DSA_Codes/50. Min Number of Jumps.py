@@ -8,6 +8,7 @@ def minNumberOfJumps(array):
                 jumps[i] = min(jumps[j] + 1, jumps[i])
     return jumps[-1]
 
+
 # O(n) time | O(1) space
 def minNumberOfJumps(array):
     if len(array) == 1:

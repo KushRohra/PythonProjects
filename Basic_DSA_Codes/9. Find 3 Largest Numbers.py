@@ -8,7 +8,7 @@ def findthreeLargest(array):
 
 def updateLargest(threeLargest, num):
     if threeLargest[2] is None or num > threeLargest[2]:
-        shiftAndupdate(threeLargest, num, 2)
+        shiftAndUpdate(threeLargest, num, 2)
     elif threeLargest[1] is None or num > threeLargest[1]:
         shiftAndUpdate(threeLargest, num, 1)
     elif threeLargest[0] is None or num > threeLargest[0]:

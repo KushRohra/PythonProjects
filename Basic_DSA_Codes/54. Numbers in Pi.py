@@ -4,6 +4,7 @@ def numbersInPi(pi, numbers):
     minSpaces = getMinSpaces(pi, numbersTable, {}, 0)
     return -1 if minSpaces == float("inf") else minSpaces
 
+
 def getMinSpaces(pi, numbersTable, cache, index):
     if index == len(pi):
         return -1
@@ -25,6 +26,7 @@ def numbersInPi(pi, numbers):
     for i in reversed(range(len(pi))):
         getMinSpaces(pi, numbersTable, cache, i)
     return -1 if cache[0] == float("inf") else cache[0]
+
 
 def getMinSpaces(pi, numbersTable, cache, index):
     if index == len(pi):

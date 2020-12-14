@@ -2,11 +2,12 @@
 def twoNumberSum(array, targetNum):
     for i in range(len(array) - 1):
         firstNum = array[i]
-        for j in range(i+1, len(array)):
+        for j in range(i + 1, len(array)):
             secondNum = array[j]
             if firstNum + secondNum == targetNum:
                 return [firstNum, secondNum]
     return []
+
 
 # O(n) time | O(n) space
 def twoNumberSum(array, targetSum):
@@ -19,6 +20,7 @@ def twoNumberSum(array, targetSum):
             nums[num] = True
     return []
 
+
 # O(nlogn) time | O(1) Space
 def twoNumberSum(array, targetSum):
     array.sort()
@@ -29,7 +31,7 @@ def twoNumberSum(array, targetSum):
         if currentSum == targetSum:
             return [array[left], array[right]]
         elif currentSum < targetSum:
-            left +=1
+            left += 1
         elif currentSum > targetSum:
             right -= 1
     return []

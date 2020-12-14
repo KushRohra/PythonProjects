@@ -8,17 +8,17 @@ def smallestDifference(arrayOne, arrayTwo):
     current = float("inf")
     smallestPair = []
     while indexOne < len(arrayOne) and indexTwo < len(arrayTwo):
-    	firstNum = arrayOne[indexOne]
-    	secondNum = arrayTwo[indexTwo]
-    	if firstNum < secondNum:
-    		current = secondNum - firstNum
-    		indexOne += 1
-    	elif secondNum < firstNum:
-    		current = firstNum - secondNum
-    		indexTwo += 1
-    	else:
-    		return [firstNum, secondNum]
-    	if smallest > current:
-    		smallest = current
-    		smallestPair = [firstNum, secondNum]
+        firstNum = arrayOne[indexOne]
+        secondNum = arrayTwo[indexTwo]
+        if firstNum < secondNum:
+            current = secondNum - firstNum
+            indexOne += 1
+        elif secondNum < firstNum:
+            current = firstNum - secondNum
+            indexTwo += 1
+        else:
+            return [firstNum, secondNum]
+        if smallest > current:
+            smallest = current
+            smallestPair = [firstNum, secondNum]
     return smallestPair

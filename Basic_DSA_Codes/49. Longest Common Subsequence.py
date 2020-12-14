@@ -7,7 +7,7 @@ def longestCommonSubsequence(str1, str2):
             if str2[i - 1] == str1[j - 1]:
                 lcs[i][j] = lcs[i - 1][j - 1] + [str2[i - 1]]
             else:
-                lcs[i][j] = max(lcs[i - 1][j], lcs[i][j - 1], key = len)
+                lcs[i][j] = max(lcs[i - 1][j], lcs[i][j - 1], key=len)
     return lcs[-1][-1]
 
 
@@ -25,11 +25,12 @@ def longestCommonSubsequence(str1, str2):
                     lcs[i][j] = [None, lcs[i][j - 1], i, j - 1]
     return buildSequence(lcs)
 
+
 def buildSequence(lcs):
     sequence = []
     i = len(lcs) - 1
     j = len(lcs[0]) - 1
-    while i !=0 and j != 0:
+    while i != 0 and j != 0:
         currentEntry = lcs[i][j]
         if currentEntry is not None:
             sequence.append(currentEntry[0])
