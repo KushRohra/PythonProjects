@@ -11,6 +11,32 @@ class PaintApp:
 	x_pos, y_pos = None, None
 	x1_line_pt, y1_line_pt, x2_line_pt, y2_line_pt = None, None, None, None
 
+	@staticmethod
+	def changeToPencil(self):
+		if self.drawing_tool == "pencil":
+			return
+		self.drawing_tool = "pencil"
+	def changeToLine(self):
+		if self.drawing_tool == "line":
+			return
+		self.drawing_tool = "line"
+	def changeToArc(self):
+		if self.drawing_tool == "arc":
+			return
+		self.drawing_tool = "arc"
+	def changeToOval(self):
+		if self.drawing_tool == "oval":
+			return
+		self.drawing_tool = "oval"
+	def changeToRectangle(self):
+		if self.drawing_tool == "rectangle":
+			return
+		self.drawing_tool = "rectangle"
+	def changeToText(self):
+		if self.drawing_tool == "text":
+			return
+		self.drawing_tool = "text"
+
 	# Catch Mouse Down
 	def left_but_down(self, event=None):
 		self.left_but = "down"
@@ -85,6 +111,21 @@ class PaintApp:
 
 	# Initialize
 	def __init__(self, root):
+
+		menubar = Menu(root)
+
+		toolbar = Menu(root, tearoff=0)		
+		toolbar.add_command(label="Pencil", command=self.changeToPencil)
+		toolbar.add_command(label="Line", command=self.changeToLine)
+		toolbar.add_command(label="Arc", command=self.changeToArc)
+		toolbar.add_command(label="Oval", command=self.changeToOval)
+		toolbar.add_command(label="Rectangle", command=self.changeToRectangle)
+		toolbar.add_command(label="Text", command=self.changeToText)
+
+		menubar.add_cascade(label="Drawing Options", menu=toolbar)
+
+		root.config(menu=menubar)
+
 		drawing_area = Canvas(root)
 		drawing_area.pack()
 
