@@ -16,6 +16,7 @@ WINNER_FONT = pygame.font.SysFont('comicsans', 100)
 
 YELLOW_HIT = pygame.USEREVENT + 1
 RED_HIT = pygame.USEREVENT + 2
+BULLET_COLLISION = pygame.USEREVENT + 3
 
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Assets', 'spaceship_yellow.png'))
 YELLOW_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 90)
@@ -80,6 +81,12 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
 			red_bullets.remove(bullet)
 		elif bullet.x < 0:
 			red_bullets.remove(bullet)
+	for yellow_bullet in yellow_bullets:
+		for red_bullet in red_bullets:
+				if red_bullet.colliderect(yellow_bullet):
+					pygame.event.post(pygame.event.Event(BULLET_COLLISION))
+					yellow_bullets.remove(yellow_bullet)
+					red_bullets.remove(red_bullet)
 
 def draw_winner(winner_text):
 	draw_winner_text = WINNER_FONT.render(winner_text, 1, WHITE)
@@ -121,6 +128,8 @@ def main():
 				BULLET_HIT_SOUND.play()
 			if event.type == YELLOW_HIT:
 				yellow_health -= 1
+				BULLET_HIT_SOUND.play()
+			if event.type == BULLET_COLLISION:
 				BULLET_HIT_SOUND.play()
 	
 		winner_text = ""
