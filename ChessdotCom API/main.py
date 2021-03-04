@@ -13,6 +13,29 @@ def print_leaderboards():
         for index, entry in enumerate(data[category]):
             print(f'Rank: {index + 1} | Username: {entry["username"]} | Rating: {entry["score"]}')
 
+
+def get_player_ratings(username):
+    try:
+        data = get_player_stats(username)
+    except Exception as e:
+        print("Please enter a valid username")
+        return
+    data = data.json
+    categories = ['chess_blitz', 'chess_bullet', 'chess_rapid', 0]
+    for category in categories:
+        if category in list(data.keys()):
+            categories[-1] = 1
+            print("Category : ", category)
+            print(f'Current Rating: {data[category]["last"]["rating"]}')
+            print(f'Best Rating: {data[category]["best"]["rating"]}')
+            print(f'Games won: {data[category]["record"]["win"]}')
+            print(f'Games lost: {data[category]["record"]["loss"]}')
+            print(f'Games draw: {data[category]["record"]["draw"]}')
+            print()
+    if categories[-1] == 0:
+        print("No existing data for such a username. Please check and enter the username carefully")
+
+
 def main():
     while True:
         print("1. Print the leaderboards")
@@ -40,6 +63,7 @@ def main():
             print()
         elif choice == 4:
             break
+
 
 if __name__ == "__main__":
     main()
