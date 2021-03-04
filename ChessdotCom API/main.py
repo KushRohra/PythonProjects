@@ -1,5 +1,6 @@
-from chessdotcom import get_leaderboards, get_player_stats
+from chessdotcom import get_leaderboards, get_player_stats, get_player_game_archives
 import pprint
+import requests
 
 printer = pprint.PrettyPrinter()
 
@@ -20,7 +21,7 @@ def get_player_ratings(username):
     except Exception as e:
         print("Please enter a valid username")
         return
-    data = data.json
+    data = data.json()
     categories = ['chess_blitz', 'chess_bullet', 'chess_rapid', 0]
     for category in categories:
         if category in list(data.keys()):
@@ -34,6 +35,26 @@ def get_player_ratings(username):
             print()
     if categories[-1] == 0:
         print("No existing data for such a username. Please check and enter the username carefully")
+
+
+def get_most_recent_game(username):
+    try:
+        data = get_player_game_archives(username)
+    except Exception as e:
+        print("Please enter a valid username")
+        return
+    data = data.json
+    if len(data['archives']) == 0:
+        print("No details for player with such username")
+        return
+    url = data['archives'][-1]
+    games = requests.get(url).json()
+    game = games['games'][-1]
+    blackPlayer, whitePlayer = game['black'], game['white']
+    print("Black Player Details: ")
+    print("Username: " + blackPlayer['username'] + " | Rating: " + str(blackPlayer['rating']) + " | Result: " + blackPlayer['result'])
+    print("White Player Details: ")
+    print("Username: " + whitePlayer['username'] + " | Rating: " + str(whitePlayer['rating']) + " | Result: " + whitePlayer['result'])
 
 
 def main():
