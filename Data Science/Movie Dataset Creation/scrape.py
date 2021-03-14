@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 import requests
 import json
 import re
+from datetime import datetime
 
 
 def get_content_value(row_data):
@@ -116,6 +117,8 @@ def convert_to_money(string):
     if string == "NA":
         return None
     i = 0
+    if type(string) is not str:
+        return
     while i < len(string):
         if string[i] == "$":
             i += 1
@@ -164,6 +167,40 @@ def convert_budget_and_box_office():
         json.dump(movie_list, f, ensure_ascii=False, indent=2)
 
 
+def get_date(date_string):
+    if date_string == "NA":
+        return None
+    date_string = date_string.split('(')[0].strip()
+    formats = ['%B %d, %Y', '%d %B %Y']
+    for format in formats:
+        try:
+            return datetime.strptime(date_string, format)
+        except Exception as e:
+            return None
+
+
+def convert_date():
+    with open('movie_data.json', 'r', encoding='utf-8') as f:
+        movie_list = json.load(f)
+
+    for movie in movie_list:
+        release_date_string = movie.get('Release date', 'NA')
+        if type(release_date_string) is list:
+            release_date_string = release_date_string[0]
+        try:
+            del movie['Release date']
+        except Exception as e:
+            pass
+        release_date = str(get_date(release_date_string))
+        movie.update({'Release date': release_date.split(' ')[0]})
+
+    try:
+        with open('movie_data.json', 'w', encoding='utf-8') as f:
+            json.dump(movie_list, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(e)
+
+
 def clean_data():
     # Cleanup references => remove [1], [2]
     # Split up the long strings
@@ -171,11 +208,12 @@ def clean_data():
     # Convert running time into integers
     minute_to_integer()
 
-    # Convert dates into datetime objects
-
     # Convert budget and box office to numbers
-    # convert_budget_and_box_office_regex()
+        # convert_budget_and_box_office_regex()
     convert_budget_and_box_office()
+
+    # Convert dates into datetime objects
+    convert_date()
 
 
 def get_movie_details(movie_url):
@@ -210,10 +248,7 @@ def main():
 
     movies = soup.select(".wikitable.sortable i a")
     for index, movie in enumerate(movies):
-        '''if index == 41:
-            break'''
-        if index % 10 == 0:
-            print(index)
+        print(index)
         try:
             full_path = base_path + movie['href']
             movie_info_list.append(get_movie_details(full_path))
@@ -225,5 +260,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    clean_data()
+    # main()
+    # clean_data()
+    pass
