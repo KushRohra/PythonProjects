@@ -7,7 +7,10 @@
     "Running time (int)": "41",
     "Box office": 45.472,
     "Budget": null,
-    "Release date": "1937-05-19"
+    "Release date": "1937-05-19",
+    "imdb": "7.1",
+    "metascore": "N/A",
+    "Rotten Tomatoes": null
   },
   {
     "title": "Snow White and the Seven Dwarfs",
@@ -60,7 +63,10 @@
     "Running time (int)": "83",
     "Box office": 418000000.0,
     "Budget": 1490000.0,
-    "Release date": "1937-12-21"
+    "Release date": "1937-12-21",
+    "imdb": "7.6",
+    "metascore": "95",
+    "Rotten Tomatoes": null
   },
   {
     "title": "Pinocchio",
@@ -110,7 +116,10 @@
     "Running time (int)": "88",
     "Box office": 164000000.0,
     "Budget": 2600000.0,
-    "Release date": "1940-02-07"
+    "Release date": "1940-02-07",
+    "imdb": "7.4",
+    "metascore": "99",
+    "Rotten Tomatoes": "73%"
   },
   {
     "title": "Fantasia",
@@ -150,7 +159,10 @@
     "Running time (int)": "126",
     "Box office": 76400000.0,
     "Budget": 2280000.0,
-    "Release date": "1940-11-13"
+    "Release date": "1940-11-13",
+    "imdb": "7.7",
+    "metascore": "96",
+    "Rotten Tomatoes": "95%"
   },
   {
     "title": "The Reluctant Dragon",
@@ -206,7 +218,10 @@
     "Running time (int)": "74",
     "Box office": 960000.0,
     "Budget": 600000.0,
-    "Release date": "1941-06-20"
+    "Release date": "1941-06-20",
+    "imdb": "6.9",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "67%"
   },
   {
     "title": "Dumbo",
@@ -254,7 +269,10 @@
     "Running time (int)": "64",
     "Box office": 1300000.0,
     "Budget": 950000.0,
-    "Release date": "1941-10-23"
+    "Release date": "1941-10-23",
+    "imdb": "7.2",
+    "metascore": "96",
+    "Rotten Tomatoes": "98%"
   },
   {
     "title": "Bambi",
@@ -299,7 +317,10 @@
     "Running time (int)": "70",
     "Box office": 267399999.99999997,
     "Budget": 858000.0,
-    "Release date": "1942-08-09"
+    "Release date": "1942-08-09",
+    "imdb": "7.3",
+    "metascore": "91",
+    "Rotten Tomatoes": "90%"
   },
   {
     "title": "Saludos Amigos",
@@ -349,7 +370,10 @@
     "Running time (int)": "42",
     "Box office": 1135000.0,
     "Budget": null,
-    "Release date": "1942-08-24"
+    "Release date": "1942-08-24",
+    "imdb": "6.1",
+    "metascore": "60",
+    "Rotten Tomatoes": null
   },
   {
     "title": "Victory Through Air Power",
@@ -390,7 +414,10 @@
     "Running time (int)": "65",
     "Box office": 799000.0,
     "Budget": 788000.0,
-    "Release date": "1943-07-17"
+    "Release date": "1943-07-17",
+    "imdb": "6.5",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "53%"
   },
   {
     "title": "The Three Caballeros",
@@ -435,7 +462,10 @@
     "Running time (int)": "71",
     "Box office": 3355000.0,
     "Budget": null,
-    "Release date": "1944-12-21"
+    "Release date": "1944-12-21",
+    "imdb": "6.4",
+    "metascore": "85",
+    "Rotten Tomatoes": "82%"
   },
   {
     "title": "Make Mine Music",
@@ -491,7 +521,10 @@
     "Running time (int)": "75",
     "Box office": 3275000.0,
     "Budget": 1350000.0,
-    "Release date": "1946-04-20"
+    "Release date": "1946-04-20",
+    "imdb": "6.3",
+    "metascore": "60",
+    "Rotten Tomatoes": "70%"
   },
   {
     "title": "Song of the South",
@@ -539,7 +572,10 @@
     "Running time (int)": "94",
     "Box office": 65000000.0,
     "Budget": 2125000.0,
-    "Release date": "1946-11-12"
+    "Release date": "1946-11-12",
+    "imdb": "7.1",
+    "metascore": "54",
+    "Rotten Tomatoes": "50%"
   },
   {
     "title": "Fun and Fancy Free",
@@ -591,7 +627,10 @@
     "Running time (int)": "73",
     "Box office": 3165000.0,
     "Budget": null,
-    "Release date": "1947-09-27"
+    "Release date": "1947-09-27",
+    "imdb": "6.5",
+    "metascore": "66",
+    "Rotten Tomatoes": "67%"
   },
   {
     "title": "Melody Time",
@@ -648,7 +687,10 @@
     "Running time (int)": "75",
     "Box office": 2560000.0,
     "Budget": 1500000.0,
-    "Release date": "1948-05-27"
+    "Release date": "1948-05-27",
+    "imdb": "6.3",
+    "metascore": "69",
+    "Rotten Tomatoes": "80%"
   },
   {
     "title": "So Dear to My Heart",
@@ -692,7 +734,10 @@
     "Running time (int)": "82",
     "Box office": 3700000.0,
     "Budget": 1500000.0,
-    "Release date": "1948-11-29"
+    "Release date": "1948-11-29",
+    "imdb": "6.8",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "52%"
   },
   {
     "title": "The Adventures of Ichabod and Mr. Toad",
@@ -743,7 +788,10 @@
     "Running time (int)": "68",
     "Box office": 1625000.0,
     "Budget": null,
-    "Release date": "1949-10-05"
+    "Release date": "1949-10-05",
+    "imdb": "7.0",
+    "metascore": "74",
+    "Rotten Tomatoes": "94%"
   },
   {
     "title": "Cinderella",
@@ -796,7 +844,10 @@
     "Running time (int)": "74",
     "Box office": 263600000.00000003,
     "Budget": 2900000.0,
-    "Release date": "1950-02-15"
+    "Release date": "1950-02-15",
+    "imdb": "6.9",
+    "metascore": "67",
+    "Rotten Tomatoes": "83%"
   },
   {
     "title": "Treasure Island",
@@ -830,7 +881,10 @@
     "Running time (int)": "96",
     "Box office": 4100000.0,
     "Budget": 1800000.0,
-    "Release date": "1950-06-22"
+    "Release date": "1950-06-22",
+    "imdb": "6.9",
+    "metascore": "89",
+    "Rotten Tomatoes": null
   },
   {
     "title": "Alice in Wonderland",
@@ -884,7 +938,10 @@
     "Running time (int)": "75",
     "Box office": 5600000.0,
     "Budget": 3000000.0,
-    "Release date": "1951-07-26"
+    "Release date": "1951-07-26",
+    "imdb": "6.4",
+    "metascore": "53",
+    "Rotten Tomatoes": "51%"
   },
   {
     "title": "The Story of Robin Hood and His Merrie Men",
@@ -914,7 +971,10 @@
     "Running time (int)": "84",
     "Box office": 2100000.0,
     "Budget": null,
-    "Release date": "1952-03-13"
+    "Release date": "1952-03-13",
+    "imdb": "6.7",
+    "metascore": "64",
+    "Rotten Tomatoes": "67%"
   },
   {
     "title": "Peter Pan",
@@ -954,7 +1014,10 @@
     "Running time (int)": "77",
     "Box office": 87400000.0,
     "Budget": 4000000.0,
-    "Release date": "1953-02-05"
+    "Release date": "1953-02-05",
+    "imdb": "7.3",
+    "metascore": "76",
+    "Rotten Tomatoes": "78%"
   },
   {
     "title": "The Sword and the Rose",
@@ -998,7 +1061,10 @@
     "Running time (int)": "92",
     "Box office": 1000000.0,
     "Budget": 2000000.0,
-    "Release date": "1953-08-08"
+    "Release date": "1953-08-08",
+    "imdb": "6.4",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "38%"
   },
   {
     "title": "The Living Desert",
@@ -1025,7 +1091,10 @@
     "Running time (int)": "69",
     "Box office": 2600000.0,
     "Budget": 300000.0,
-    "Release date": "1953-11-10"
+    "Release date": "1953-11-10",
+    "imdb": "7.5",
+    "metascore": "69",
+    "Rotten Tomatoes": "74%"
   },
   {
     "title": "Rob Roy, the Highland Rogue",
@@ -1056,7 +1125,10 @@
     "Running time (int)": "81",
     "Box office": null,
     "Budget": 1800000.0,
-    "Release date": "None"
+    "Release date": "None",
+    "imdb": "6.3",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "36%"
   },
   {
     "title": "The Vanishing Prairie",
@@ -1080,7 +1152,10 @@
     "Running time (int)": "60",
     "Box office": 1750000.0,
     "Budget": null,
-    "Release date": "1954-08-17"
+    "Release date": "1954-08-17",
+    "imdb": "7.4",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "81%"
   },
   {
     "title": "20,000 Leagues Under the Sea",
@@ -1112,7 +1187,10 @@
     "Running time (int)": "127",
     "Box office": 28200000.0,
     "Budget": 5000000.0,
-    "Release date": "1954-12-23"
+    "Release date": "1954-12-23",
+    "imdb": "7.2",
+    "metascore": "83",
+    "Rotten Tomatoes": "89%"
   },
   {
     "title": "Davy Crockett, King of the Wild Frontier",
@@ -1138,7 +1216,10 @@
     "Running time (int)": "92",
     "Box office": 2150000.0,
     "Budget": null,
-    "Release date": "1955-05-25"
+    "Release date": "1955-05-25",
+    "imdb": "7.0",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "100%"
   },
   {
     "title": "Lady and the Tramp",
@@ -1178,7 +1259,10 @@
     "Running time (int)": "76",
     "Box office": 187000000.0,
     "Budget": 4000000.0,
-    "Release date": "1955-06-22"
+    "Release date": "1955-06-22",
+    "imdb": "7.3",
+    "metascore": "78",
+    "Rotten Tomatoes": "93%"
   },
   {
     "title": "The African Lion",
@@ -1202,7 +1286,10 @@
     "Running time (int)": "75",
     "Box office": 2100000.0,
     "Budget": null,
-    "Release date": "1955-09-14"
+    "Release date": "1955-09-14",
+    "imdb": "7.2",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "77%"
   },
   {
     "title": "The Littlest Outlaw",
@@ -1219,7 +1306,10 @@
     "Running time (int)": "73",
     "Box office": 1600000.0,
     "Budget": null,
-    "Release date": "1955-12-22"
+    "Release date": "1955-12-22",
+    "imdb": "6.2",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "50%"
   },
   {
     "title": "The Great Locomotive Chase",
@@ -1246,7 +1336,10 @@
     "Running time (int)": "85",
     "Box office": 1700000.0,
     "Budget": null,
-    "Release date": "1956-06-08"
+    "Release date": "1956-06-08",
+    "imdb": "6.9",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "53%"
   },
   {
     "title": "Davy Crockett and the River Pirates",
@@ -1275,7 +1368,10 @@
     "Running time (int)": "81",
     "Box office": null,
     "Budget": null,
-    "Release date": "1956-07-18"
+    "Release date": "1956-07-18",
+    "imdb": "6.8",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "73%"
   },
   {
     "title": "Secrets of Life",
@@ -1307,7 +1403,10 @@
     "Running time (int)": "70",
     "Box office": null,
     "Budget": null,
-    "Release date": "1956-09-04"
+    "Release date": "1956-09-04",
+    "imdb": "7.3",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "50%"
   },
   {
     "title": "Westward Ho the Wagons!",
@@ -1337,7 +1436,10 @@
     "Running time (int)": "90",
     "Box office": 2750000.0,
     "Budget": null,
-    "Release date": "1956-12-20"
+    "Release date": "1956-12-20",
+    "imdb": "5.8",
+    "metascore": "N/A",
+    "Rotten Tomatoes": null
   },
   {
     "title": "Johnny Tremain",
@@ -1366,7 +1468,10 @@
     "Running time (int)": "80",
     "Box office": null,
     "Budget": 700000.0,
-    "Release date": "1957-06-19"
+    "Release date": "1957-06-19",
+    "imdb": "6.5",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "50%"
   },
   {
     "title": "Perri",
@@ -1408,7 +1513,10 @@
     "Running time (int)": "75",
     "Box office": 1750000.0,
     "Budget": null,
-    "Release date": "1957-08-28"
+    "Release date": "1957-08-28",
+    "imdb": "6.7",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "67%"
   },
   {
     "title": "Old Yeller",
@@ -1443,7 +1551,10 @@
     "Running time (int)": "83",
     "Box office": 6250000.0,
     "Budget": null,
-    "Release date": "1957-12-25"
+    "Release date": "1957-12-25",
+    "imdb": "7.3",
+    "metascore": "84",
+    "Rotten Tomatoes": "100%"
   },
   {
     "title": "The Light in the Forest",
@@ -1470,7 +1581,10 @@
     "Running time (int)": "83",
     "Box office": null,
     "Budget": null,
-    "Release date": "1958-07-08"
+    "Release date": "1958-07-08",
+    "imdb": "6.5",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "36%"
   },
   {
     "title": "White Wilderness",
@@ -1490,7 +1604,10 @@
     "Running time (int)": "72",
     "Box office": 1800000.0,
     "Budget": null,
-    "Release date": "1958-08-12"
+    "Release date": "1958-08-12",
+    "imdb": "5.1",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "25%"
   },
   {
     "title": "Tonka",
@@ -1529,7 +1646,10 @@
     "Running time (int)": "97",
     "Box office": 2500000.0,
     "Budget": null,
-    "Release date": "1958-12-25"
+    "Release date": "1958-12-25",
+    "imdb": "6.4",
+    "metascore": "N/A",
+    "Rotten Tomatoes": "71%"
   },
   {
     "title": "Sleeping Beauty",
@@ -1577,6 +1697,9 @@
     "Running time (int)": "75",
     "Box office": 51600000.0,
     "Budget": 6000000.0,
-    "Release date": "1959-01-29"
+    "Release date": "1959-01-29",
+    "imdb": "7.2",
+    "metascore": "85",
+    "Rotten Tomatoes": "89%"
   }
 ]

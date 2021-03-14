@@ -3,6 +3,7 @@ import requests
 import json
 import re
 from datetime import datetime
+import urllib
 
 
 def get_content_value(row_data):
@@ -194,11 +195,8 @@ def convert_date():
         release_date = str(get_date(release_date_string))
         movie.update({'Release date': release_date.split(' ')[0]})
 
-    try:
-        with open('movie_data.json', 'w', encoding='utf-8') as f:
-            json.dump(movie_list, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(e)
+    with open('movie_data.json', 'w', encoding='utf-8') as f:
+        json.dump(movie_list, f, ensure_ascii=False, indent=2)
 
 
 def clean_data():
@@ -214,6 +212,43 @@ def clean_data():
 
     # Convert dates into datetime objects
     convert_date()
+
+
+def get_ratings_from_api(title):
+    url = "http://www.omdbapi.com/?"
+    parameters = {'t': title, "apikey": 'a42a5b44'}
+    params_encoded = urllib.parse.urlencode(parameters)
+    full_url = url + params_encoded
+    r = requests.get(full_url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+def get_rotten_tomato_score(data):
+    ratings = data.get("Ratings", None)
+    if ratings is not None:
+        for rating in ratings:
+            if rating['Source'] == "Rotten Tomatoes":
+                return rating['Value']
+    return None
+
+
+def get_omdb_info():
+    with open('movie_data.json', 'r', encoding='utf-8') as f:
+        movie_list = json.load(f)
+
+    for movie in movie_list:
+        title = movie['title']
+        data = get_ratings_from_api(title)
+        if data is not None:
+            rating = get_rotten_tomato_score(data)
+        movie.update({'imdb': data.get('imdbRating', None)})
+        movie.update({'metascore': data.get('Metascore', None)})
+        movie.update({'Rotten Tomatoes': rating})
+
+    with open('movie_data.json', 'w', encoding='utf-8') as f:
+        json.dump(movie_list, f, ensure_ascii=False, indent=2)
 
 
 def get_movie_details(movie_url):
@@ -262,4 +297,4 @@ def main():
 if __name__ == "__main__":
     # main()
     # clean_data()
-    pass
+    get_omdb_info()
