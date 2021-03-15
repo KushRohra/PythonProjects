@@ -4,6 +4,7 @@ import json
 import re
 from datetime import datetime
 import urllib
+import pandas
 
 
 def get_content_value(row_data):
@@ -251,6 +252,14 @@ def get_omdb_info():
         json.dump(movie_list, f, ensure_ascii=False, indent=2)
 
 
+def save_to_csv():
+    with open('movie_data.json', 'r', encoding='utf-8') as f:
+        movie_list = json.load(f)
+
+    df = pandas.DataFrame(movie_list)
+    df.to_csv("movie_data_csv.csv")
+
+
 def get_movie_details(movie_url):
     r = requests.get(movie_url)
     soup = bs(r.content, features='lxml')
@@ -295,6 +304,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # main()
-    # clean_data()
+    main()
+    clean_data()
     get_omdb_info()
+    save_to_csv()
