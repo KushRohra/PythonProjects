@@ -22,7 +22,6 @@ def view():
     cur = conn.cursor()
     cur.execute("SELECT * FROM book")
     rows = cur.fetchall()
-    print(rows)
     conn.close()
     return rows
 
