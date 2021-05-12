@@ -2,29 +2,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, accuracy_score
 
-dataset = pd.read_csv('../datasets/Social_Network_Ads.csv')
+dataset = pd.read_csv("../datasets/Social_Network_Ads.csv")
 X = dataset.iloc[:, :-1].values
-Y = dataset.iloc[:, -1].values
+y = dataset.iloc[:, -1].values
 
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=0)
+# Splitting the dataset into the Training set and Test set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
 
 # Feature Scaling
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
-X_test = sc.fit_transform(X_test)
+X_test = sc.transform(X_test)
 
-classifier = LogisticRegression(random_state=0)
+# Training the K-NN model on the Training set
+classifier = KNeighborsClassifier(n_neighbors=3)
 classifier.fit(X_train, y_train)
 
 # Predicting a new result
-predicted_value = classifier.predict(sc.transform([[30, 87000]]))
-print("Predicting a new result : ", predicted_value[0])
-print()
+print(classifier.predict(sc.transform([[30, 87000]])))
 
 # Predicting the test set results
 y_pred = classifier.predict(X_test)

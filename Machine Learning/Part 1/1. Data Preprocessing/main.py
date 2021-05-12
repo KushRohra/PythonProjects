@@ -7,7 +7,7 @@ from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 
 # Reading Dataset
-dataset = pd.read_csv('Data.csv')
+dataset = pd.read_csv('../datasets/Data.csv')
 x = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 

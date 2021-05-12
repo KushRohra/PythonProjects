@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-dataset = pd.read_csv('Position_Salaries.csv')
+dataset = pd.read_csv('../datasets/Position_Salaries.csv')
 x = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 

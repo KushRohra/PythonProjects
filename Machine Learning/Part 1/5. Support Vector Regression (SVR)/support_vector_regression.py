@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
-dataset = pd.read_csv('Position_Salaries.csv')
+dataset = pd.read_csv('../datasets/Position_Salaries.csv')
 x = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 
